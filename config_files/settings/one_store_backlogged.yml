@@ -51,8 +51,12 @@ observation_params:
     'lead_times': True 
     'upper_bounds': False
   'demand': 
-    'past_periods': 0 
+    'past_periods': 16 # of past periods to include as features
     'period_shift': 0
+    # period_shift is how many periods before the current period the past demand ends
+  'time_features_file': 'data_files/favorita/dates_with_info.csv'
+  'time_features':
+    ['days_from_christmas']
 
 store_params: 
   'demand': 
